@@ -3,7 +3,7 @@ aes-256-java-bks
 
 JAVA AES-256 Encryption / Decryption with Key Store Management using Bouncy Castle Keystore (BKS)
 
-This code allows you to encrypt/decrypt any kind of file using AES-256 standard. It uses Bouncy Castle Keystore for Key Management. Beside Encryption, the code allows yo to manage your keystore, like Creating a new Keystore, Loading an existing keystore, adding key to an existing keystore, generating new Key with user Password, deleting key from a keystore or displaying keys from given keystore, all these features could accessed at runtime, all you need to do is execute the program.
+This code allows you to encrypt/decrypt any kind of file using AES-256 standard. It uses Bouncy Castle Keystore for Key Management. Beside Encryption, the code allows you to manage your keystore, like Creating a new Keystore, Loading an existing keystore, adding key to an existing keystore, generating new Key with user Password, deleting key from a keystore or displaying keys from given keystore, all these features could be accessed at runtime, all you need to do is execute the program.
 
 (Don't forget to provide the correct path of a file which is needed to be encrypted inside Main.java, encryption (Key key, String IV, String FilePath) )
 
