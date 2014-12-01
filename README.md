@@ -6,27 +6,31 @@ aes-256-java-bks
 Download Bouncycastle jar from, http://goo.gl/qFtPCE.
 
 Configure BouncyCastle for PC using below method.
-			Adding the BC Provider Statically (Recommended),
-				Copy jar file to each
-					jre\lib\ext (JDK (bundled JRE)
-					\lib\ext (JRE)
+
+        Adding the BC Provider Statically (Recommended),
+                Copy jar file to each
+                        jre\lib\ext (JDK (bundled JRE)
+                        \lib\ext (JRE)
 					
-				Modify the java.security file under,
-					jre\lib\security
-					lib\security
-					and add the following entry,
-						security.provider.7=org.bouncycastle.jce.provider.BouncyCastleProvider
+        Modify the java.security file under,
+                jre\lib\security
+                lib\security
+	and add the following entry,
+		security.provider.7=org.bouncycastle.jce.provider.BouncyCastleProvider
 
 You can now use either "keytool" utility or Java code (explained later) to generate new 
 Keystore,
 
 Using keytool,
-	Open cmd.exe in Windows,
-	Change directory to, your java directory\jre\bin, and execute the following 
-command,
+
+Open cmd.exe in Windows,
+
+	Change directory to, your java directory\jre\bin, and execute the following command,
+	
+
         "keytool -genseckey -keystore mykeystore.keystore -storetype BKS -storepass mystorepass -keyalg AES -keysize 256 -alias myfirsykey -keypass mykeypass -providerpath c:\bcprov-ext-jdk15on-1.46.jar -provider org.bouncycastle.jce.provider.BouncyCastleProvider" 
             
-        (change -providerpath with your bks jar path).
+(change -providerpath with your bks jar path).
 
 This will create a new keystore and add a new AES256 key with the given parameters.  
 		 
