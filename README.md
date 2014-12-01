@@ -64,7 +64,7 @@ How to Run
 ===========
 
 1. If you are running for the first time then first create a Keystore using either [keytool](#keytool) or [above method](#mymethod).
-2.Provide correct path of a file needed to be ecnrypted on line **137** in **Main.java**
+2. Provide correct path of a file needed to be ecnrypted on line **137** in **Main.java**
 3. Execute **Main.java**
 4. Follow the instruction, to either **load** or **display** existing keys from keystore or to **generate** a new key.
 5. Choose wether you want to **Encrypt** or **Decrypt** a file.
