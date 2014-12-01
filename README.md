@@ -1,18 +1,22 @@
 aes-256-java-bks
 ================
 
-JAVA AES-256 Encryption / Decryption with Key Store Management using Bouncy Castle Keystore (BKS)
+**(JAVA) AES-256 Encryption / Decryption with Key Store Management using Bouncy Castle Keystore (BKS)**
 
-This code allows you to encrypt/decrypt any kind of file using AES-256 standard. It uses Bouncy Castle Keystore for Key Management. Beside Encryption, the code allows you to manage your keystore, like Creating a new Keystore, Loading an existing keystore, adding key to an existing keystore, generating new Key with user Password, deleting key from a keystore or displaying keys from given keystore, all these features could be accessed at runtime, all you need to do is execute the program.
+Overview:
+===================
 
-(Don't forget to provide the correct path of a file which is needed to be encrypted inside Main.java, encryption (Key key, String IV, String FilePath) )
+This simple code allows you to encrypt/decrypt any kind of file using AES-256 standard. It uses Bouncy Castle Keystore for Key Management. Beside Encryption, the code allows you to manage your keystore, like Creating a new Keystore, Loading an existing keystore, adding key to an existing keystore, generating new Key with user Password, deleting key from a keystore or displaying keys from given keystore, all these features could be accessed at runtime, all you need to do is execute the program.
 
+**(Don't forget to provide the correct path of a file which is needed to be encrypted inside Main.java, encryption (Key key, String IV, String FilePath) )**
+
+**NOTE:** This example is built using **JDK7**, ultimate strength JCE (JDK7) and **Eclipse**
 
  before you can begin, you need to add BKS as you security provider in your Java security file,
 
 Download Bouncycastle jar from, http://goo.gl/qFtPCE.
 
-Configure BouncyCastle for PC using below method.
+**Configure BouncyCastle for PC using below method.**
 
         Adding the BC Provider Statically (Recommended),
                 Copy jar file to each
@@ -28,7 +32,7 @@ Configure BouncyCastle for PC using below method.
 You can now use either "keytool" utility or Java code (explained later) to generate new 
 Keystore,
 
-Using keytool,
+**Using keytool,**
 
 Open cmd.exe in Windows,
 
@@ -41,7 +45,9 @@ Open cmd.exe in Windows,
 
 This will create a new keystore and add a new AES256 key with the given parameters.  
 		 
-Creating new Keystore, the easy way,
+**Creating new Keystore, the easy way,**
+
+	I have written the following custom method to easily create a keystore from within the code,
 
         KeyProcess.createStore (String path, String keyStoreName, String
         password)
@@ -67,3 +73,5 @@ One more thing,
 
         link: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
+
+Copywrite &copy;2014 - Use of this code and it's concepts are considered a Proof-of-concept and should not be used directly in any environment
